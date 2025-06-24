@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>びまん性大細胞型B細胞性リンパ腫とリツキサン単剤療法</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .slide-container {
+            min-height: calc(100vh - 80px); /* Adjust for header/footer if needed */
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .pagination-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #cbd5e1; /* Gray-300 */
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .pagination-dot.active {
+            background-color: #3b82f6; /* Blue-500 */
+        }
+        .icon-box {
+            background-color: #e0f2fe; /* Blue-100 */
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 600;
+            color: #1e40af; /* Blue-800 */
+        }
+        .icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 8px;
+            display: inline-block; /* For SVG */
+        }
+    </style>
+</head>
+<body class="p-4 flex flex-col items-center justify-center min-h-screen">
+
+    <div class="max-w-4xl w-full bg-white shadow-xl rounded-2xl overflow-hidden p-6 relative slide-container">
+
+        <!-- Slide 1: びまん性大細胞型B細胞性リンパ腫（DLBCL）とは？ -->
+        <div id="slide-1" class="slide active flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
+            <div class="md:w-1/2 flex justify-center items-center">
+                <div class="relative w-full max-w-md bg-gradient-to-br from-blue-100 to-white p-6 rounded-2xl shadow-inner">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">健康なB細胞</h3>
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 bg-blue-400 rounded-full flex items-center justify-center text-white text-4xl font-bold border-4 border-blue-500 shadow-md">B</div>
+                        <p class="mt-2 text-gray-600 text-sm">（通常サイズ、機能正常）</p>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 h-1/3 bg-blue-50 rotate-3 transform origin-bottom-right rounded-b-2xl opacity-50"></div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-center items-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-4 text-center">びまん性大細胞型B細胞性リンパ腫<br>（DLBCL）とは？</h2>
+                <div class="relative w-full max-w-md bg-gradient-to-br from-red-100 to-white p-6 rounded-2xl shadow-inner mt-4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">異常なB細胞（DLBCL）</h3>
+                    <div class="flex flex-col items-center">
+                        <div class="w-32 h-32 bg-red-500 rounded-full flex items-center justify-center text-white text-6xl font-bold border-4 border-red-600 shadow-lg animate-pulse-slow">B</div>
+                        <p class="mt-2 text-gray-600 text-sm">（異常に大きく、急速に増殖）</p>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 h-1/3 bg-red-50 rotate-3 transform origin-bottom-right rounded-b-2xl opacity-50"></div>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>びまん性大細胞型B細胞性リンパ腫（DLBCL）は、リンパ系組織に発生する悪性腫瘍の一種です。特に、B細胞と呼ばれる免疫細胞が異常に増殖し、腫瘍を形成します。この病気の特徴は、進行が非常に速いことと、腫瘍細胞が正常なB細胞よりも異常に大きいことです。全身のリンパ節だけでなく、骨髄や消化管など、体の様々な場所に発生する可能性があります。</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: リツキサン（Rituximab）とは？ -->
+        <div id="slide-2" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサン（Rituximab）とは？</h2>
+            <div class="relative flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-blue-200 p-8 rounded-3xl shadow-lg border-2 border-blue-300 w-full max-w-lg">
+                <div class="icon w-48 h-48 mb-4">
+                    <!-- SVG: Generic Antibody Shape -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600 w-full h-full">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM12 6v6m-4-4l4 4m4-4L12 12"/>
+                        <path d="M12 6C9 6 6 9 6 12s3 6 6 6 6-3 6-6-3-6-6-6zM12 18c-3 0-6-3-6-6h12c0 3-3 6-6 6z"/>
+                        <path d="M10 10l2 2 2-2M12 12v6"/>
+                        <path d="M8 12c0 2.21 1.79 4 4 4s4-1.79 4-4"/>
+                        <path d="M12 16v-4"/>
+                        <path d="M10 12l2 2 2-2"/>
+                        <path d="M8 12h8"/>
+                    </svg>
+                    <!-- Simplified representation of an antibody -->
+                    <svg class="w-full h-full text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM12 4c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm-1 2h2v6h-2V6zm0 8h2v2h-2v-2z"/>
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM12 6v6m-4-4l4 4m4-4L12 12"/>
+                        <path d="M12 2c-3.13 0-6 2.87-6 6s2.87 6 6 6 6-2.87 6-6-2.87-6-6-6zm0 10v-4m-2 2l2 2 2-2"/>
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12 4.5c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zM12.75 6a.75.75 0 00-1.5 0v6.25a.75.75 0 001.5 0V6zM9.75 9a.75.75 0 00-1.5 0v3.25a.75.75 0 001.5 0V9zM15.75 9a.75.75 0 00-1.5 0v3.25a.75.75 0 001.5 0V9z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <p class="text-xl font-semibold text-gray-800">ヒト-マウスキメラ型モノクローナル抗体</p>
+                <p class="mt-2 text-lg text-gray-700">特定の細胞表面抗原を標的とする薬剤</p>
+                <div class="absolute top-4 right-4 bg-white rounded-full px-3 py-1 text-xs font-semibold text-blue-500 shadow-sm">治療薬</div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサン（一般名：リツキシマブ）は、分子標的薬と呼ばれるがん治療薬の一種です。これは、特定の細胞表面に存在するタンパク質（抗原）に特異的に結合するように設計された「モノクローナル抗体」という種類の薬剤です。リツキサンは、びまん性大細胞型B細胞性リンパ腫の治療において、異常なB細胞を選択的に攻撃することで効果を発揮します。</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: リツキサンの作用機序 - その1: CD20抗原への結合 -->
+        <div id="slide-3" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサンの作用機序 - その1:<br>CD20抗原への結合</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 p-4">
+                <!-- B-cell with CD20 -->
+                <div class="relative w-48 h-48 bg-purple-200 rounded-full flex items-center justify-center border-4 border-purple-400 shadow-lg animate-pulse-slow">
+                    <span class="text-6xl font-bold text-purple-700">B</span>
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">CD20</div>
+                    <div class="absolute -top-4 right-4 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">CD20</div>
+                    <div class="absolute bottom-4 left-8 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">CD20</div>
+                    <div class="absolute bottom-8 right-2 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">CD20</div>
+                    <div class="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">CD20</div>
+                    <div class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">CD20</div>
+                </div>
+                <!-- Arrow -->
+                <div class="text-blue-500 text-6xl font-extrabold animate-bounce-horizontal">→</div>
+                <!-- B-cell with Rituximab -->
+                <div class="relative w-48 h-48 bg-purple-200 rounded-full flex items-center justify-center border-4 border-purple-400 shadow-lg">
+                    <span class="text-6xl font-bold text-purple-700">B</span>
+                    <!-- Rituximab antibodies attached -->
+                    <div class="absolute -top-8 -left-8 w-20 h-20 icon-box bg-blue-300 text-blue-800 border-2 border-blue-400">
+                        <span class="text-4xl">🔬</span>
+                        <p class="text-xs">Rituximab</p>
+                    </div>
+                    <div class="absolute -top-8 right-8 w-20 h-20 icon-box bg-blue-300 text-blue-800 border-2 border-blue-400">
+                        <span class="text-4xl">🔬</span>
+                        <p class="text-xs">Rituximab</p>
+                    </div>
+                    <div class="absolute bottom-8 left-0 w-20 h-20 icon-box bg-blue-300 text-blue-800 border-2 border-blue-400">
+                        <span class="text-4xl">🔬</span>
+                        <p class="text-xs">Rituximab</p>
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-20 h-20 icon-box bg-blue-300 text-blue-800 border-2 border-blue-400">
+                        <span class="text-4xl">🔬</span>
+                        <p class="text-xs">Rituximab</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xl text-gray-800 mt-4 text-center">リツキサンはDLBCL細胞に多く発現する<br><span class="font-bold text-purple-600">CD20抗原</span>に特異的に結合します。</p>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサンがDLBCLの治療に有効な最初のステップは、その特定の標的です。DLBCL細胞の表面には、CD20と呼ばれるタンパク質が非常に多く発現しています。リツキサンは、このCD20抗原に対して非常に高い特異性を持っており、まるで鍵と鍵穴のように、ぴたりと結合します。この結合が、その後のDLBCL細胞を破壊するメカニズムの引き金となります。</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: リツキサンの作用機序 - その2: 免疫応答の活性化 -->
+        <div id="slide-4" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサンの作用機序 - その2:<br>免疫応答の活性化</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-2xl p-4">
+                <!-- ADCC -->
+                <div class="flex flex-col items-center bg-green-50 p-6 rounded-2xl shadow-md border-2 border-green-200">
+                    <h3 class="text-xl font-bold text-green-700 mb-4">ADCC (抗体依存性細胞傷害)</h3>
+                    <div class="relative w-40 h-40 bg-purple-200 rounded-full flex items-center justify-center border-4 border-purple-400 animate-pulse-slow">
+                        <span class="text-5xl font-bold text-purple-700">B</span>
+                        <div class="absolute -top-4 -left-4 w-16 h-16 icon-box bg-blue-300 text-blue-800">🔬</div>
+                        <div class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-red-400 rounded-full flex items-center justify-center text-3xl text-white font-bold shadow-lg">NK</div>
+                        <div class="absolute bottom-0 left-0 w-16 h-16 bg-green-400 rounded-full flex items-center justify-center text-3xl text-white font-bold shadow-lg">MΦ</div>
+                    </div>
+                    <p class="mt-4 text-center text-gray-700 text-sm">リツキサン結合によりNK細胞やマクロファージが<br>DLBCL細胞を攻撃</p>
+                </div>
+                <!-- CDC -->
+                <div class="flex flex-col items-center bg-yellow-50 p-6 rounded-2xl shadow-md border-2 border-yellow-200">
+                    <h3 class="text-xl font-bold text-yellow-700 mb-4">CDC (補体依存性細胞傷害)</h3>
+                    <div class="relative w-40 h-40 bg-purple-200 rounded-full flex items-center justify-center border-4 border-purple-400 animate-pulse-slow">
+                        <span class="text-5xl font-bold text-purple-700">B</span>
+                        <div class="absolute -top-4 -left-4 w-16 h-16 icon-box bg-blue-300 text-blue-800">🔬</div>
+                        <!-- Complement proteins -->
+                        <div class="absolute top-0 right-8 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-xs text-white font-bold shadow-md">C1</div>
+                        <div class="absolute bottom-8 right-0 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-xs text-white font-bold shadow-md">C3</div>
+                        <div class="absolute bottom-0 left-8 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-xs text-white font-bold shadow-md">C9</div>
+                    </div>
+                    <p class="mt-4 text-center text-gray-700 text-sm">リツキサン結合により補体系が活性化され<br>DLBCL細胞を破壊</p>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサンがDLBCL細胞のCD20に結合すると、私たちの体の免疫システムが活性化されます。一つは「抗体依存性細胞傷害（ADCC）」で、リツキサンに結合されたDLBCL細胞を、NK細胞やマクロファージといった免疫細胞が異物として認識し、攻撃・破壊します。もう一つは「補体依存性細胞傷害（CDC）」で、補体という血液中のタンパク質群が活性化され、DLBCL細胞の細胞膜に穴を開け、細胞を死滅させます。</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: リツキサンの作用機序 - その3: 直接的な細胞死の誘導 -->
+        <div id="slide-5" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサンの作用機序 - その3:<br>直接的な細胞死の誘導</h2>
+            <div class="relative flex items-center justify-center w-full max-w-xl bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-3xl shadow-lg border-2 border-pink-200">
+                <!-- B-cell before apoptosis -->
+                <div class="relative w-48 h-48 bg-purple-200 rounded-full flex items-center justify-center border-4 border-purple-400 animate-pulse-slow">
+                    <span class="text-6xl font-bold text-purple-700">B</span>
+                    <div class="absolute -top-4 -left-4 w-16 h-16 icon-box bg-blue-300 text-blue-800">🔬</div>
+                    <div class="absolute -top-4 right-4 w-16 h-16 icon-box bg-blue-300 text-blue-800">🔬</div>
+                    <p class="absolute bottom-4 text-gray-600 text-sm">（リツキサン結合後）</p>
+                </div>
+                <div class="mx-8 text-blue-500 text-6xl font-extrabold animate-bounce-horizontal">→</div>
+                <!-- B-cell undergoing apoptosis -->
+                <div class="relative w-48 h-48 bg-gray-200 rounded-full flex flex-col items-center justify-center border-4 border-gray-400 animate-fade-out-scale">
+                    <span class="text-6xl font-bold text-gray-500 opacity-70">B</span>
+                    <div class="absolute inset-0 flex items-center justify-center text-red-500 text-5xl font-bold opacity-0 animate-fade-in-shatter">💥</div>
+                    <p class="mt-2 text-gray-600 text-sm">（アポトーシス）</p>
+                </div>
+            </div>
+            <p class="text-xl text-gray-800 mt-4 text-center">リツキサンはDLBCL細胞に<br><span class="font-bold text-red-600">アポトーシス（プログラムされた細胞死）</span>を直接誘導します。</p>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサンの作用は、免疫システムの活性化だけにとどまりません。リツキサンがCD20に結合することで、DLBCL細胞に直接的に「アポトーシス」と呼ばれるプログラムされた細胞死を誘導する能力も持っています。これは、細胞自身が内部から死滅するメカニズムであり、異常な細胞が増殖するのを防ぐ上で非常に重要な役割を果たします。これにより、多角的なアプローチでDLBCL細胞の排除を促進します。</p>
+            </div>
+        </div>
+
+        <!-- Slide 6: リツキサン単剤療法 - 治療対象と方法 -->
+        <div id="slide-6" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサン単剤療法 - 治療対象と方法</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+                <div class="icon-box bg-purple-50 border-purple-200 text-purple-800">
+                    <span class="icon text-6xl">🎯</span>
+                    <h3 class="text-2xl font-semibold">治療対象</h3>
+                    <ul class="list-disc list-inside mt-2 text-base text-left w-full pl-4">
+                        <li>再発・難治性のDLBCL</li>
+                        <li>高齢者や基礎疾患のある方で、<br>強力な化学療法が困難な場合</li>
+                        <li>特定の前駆状態の治療</li>
+                    </ul>
+                </div>
+                <div class="icon-box bg-green-50 border-green-200 text-green-800">
+                    <span class="icon text-6xl">🗓️</span>
+                    <h3 class="text-2xl font-semibold">治療方法（例）</h3>
+                    <ul class="list-disc list-inside mt-2 text-base text-left w-full pl-4">
+                        <li>点滴静注による投与</li>
+                        <li>通常、週に1回、数週間にわたって投与</li>
+                        <li>その後、維持療法として数ヶ月おきに投与</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサン単剤療法は、通常、他の抗がん剤との併用療法（R-CHOP療法など）が標準ですが、特定の状況下で単独で使用されます。例えば、治療後に再発してしまった場合や、初期治療が効きにくい難治性のDLBCLに対して用いられます。また、高齢の患者さんや、心臓病などの基礎疾患をお持ちで、強力な化学療法に耐えることが難しいと判断された場合にも、リツキサン単剤療法が選択肢となることがあります。投与は通常、点滴で行われ、週に1回を数週間続けるといったサイクルで実施されます。</p>
+            </div>
+        </div>
+
+        <!-- Slide 7: リツキサン単剤療法 - 治療の流れ -->
+        <div id="slide-7" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサン単剤療法 - 治療の流れ</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 w-full max-w-4xl p-4">
+                <div class="icon-box w-36 h-36 md:w-48 md:h-48 text-2xl md:text-3xl">
+                    <span class="icon text-5xl md:text-6xl">💊</span>
+                    <p class="font-semibold text-sm md:text-base">事前投薬</p>
+                </div>
+                <div class="text-blue-500 text-5xl md:text-6xl font-extrabold">→</div>
+                <div class="icon-box w-36 h-36 md:w-48 md:h-48 text-2xl md:text-3xl">
+                    <span class="icon text-5xl md:text-6xl">💧</span>
+                    <p class="font-semibold text-sm md:text-base">点滴投与</p>
+                </div>
+                <div class="text-blue-500 text-5xl md:text-6xl font-extrabold">→</div>
+                <div class="icon-box w-36 h-36 md:w-48 md:h-48 text-2xl md:text-3xl">
+                    <span class="icon text-5xl md:text-6xl">👀</span>
+                    <p class="font-semibold text-sm md:text-base">経過観察</p>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサンを点滴投与する際には、いくつかのステップを踏みます。まず、点滴を開始する前に、インフュージョンリアクション（点滴時によく見られるアレルギーのような反応）を予防するために、抗ヒスタミン薬やステロイドなどの「事前投薬」が行われます。次に、リツキサンを時間をかけてゆっくりと「点滴静脈注射」します。初回は特に慎重に、時間をかけて投与されます。点滴中は、看護師や医師が患者さんの状態を注意深く観察し、異変があればすぐに対応できるよう準備しています。点滴終了後も、しばらくは体調の変化がないか「経過観察」が行われます。</p>
+            </div>
+        </div>
+
+        <!-- Slide 8: リツキサンの主な副作用 -->
+        <div id="slide-8" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサンの主な副作用</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl p-4">
+                <div class="icon-box bg-red-50 border-red-200 text-red-800">
+                    <span class="icon text-6xl">🌡️</span>
+                    <p class="text-lg font-semibold">点滴時反応（発熱、悪寒、発疹など）</p>
+                </div>
+                <div class="icon-box bg-orange-50 border-orange-200 text-orange-800">
+                    <span class="icon text-6xl">😷</span>
+                    <p class="text-lg font-semibold">感染症（免疫力低下による）</p>
+                </div>
+                <div class="icon-box bg-yellow-50 border-yellow-200 text-yellow-800">
+                    <span class="icon text-6xl">🩸</span>
+                    <p class="text-lg font-semibold">血液学的副作用（白血球減少など）</p>
+                </div>
+                <div class="icon-box bg-purple-50 border-purple-200 text-purple-800">
+                    <span class="icon text-6xl">🤢</span>
+                    <p class="text-lg font-semibold">消化器症状（吐き気、下痢など）</p>
+                </div>
+                <div class="icon-box bg-pink-50 border-pink-200 text-pink-800">
+                    <span class="icon text-6xl">😴</span>
+                    <p class="text-lg font-semibold">疲労感</p>
+                </div>
+                <div class="icon-box bg-blue-50 border-blue-200 text-blue-800">
+                    <span class="icon text-6xl">🧠</span>
+                    <p class="text-lg font-semibold">稀な神経学的副作用</p>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサンにはいくつかの副作用があります。最も多いのは点滴中に起こる「点滴時反応」で、発熱、悪寒、吐き気、発疹、かゆみなどが挙げられます。これらは点滴速度の調整や事前投薬で管理できます。また、リツキサンが正常なB細胞も攻撃するため、免疫力が低下し、「感染症」にかかりやすくなることがあります。その他、「血液学的副作用」として、白血球や血小板の減少が見られることもあります。稀ではありますが、消化器症状や疲労感、非常に稀に進行性多巣性白質脳症（PML）などの神経学的副作用が報告されています。</p>
+            </div>
+        </div>
+
+        <!-- Slide 9: 副作用への対策と注意点 -->
+        <div id="slide-9" class="slide flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">副作用への対策と注意点</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl p-4">
+                <div class="icon-box bg-blue-50 border-blue-200 text-blue-800">
+                    <span class="icon text-6xl">👩‍⚕️</span>
+                    <p class="text-lg font-semibold">医療スタッフへの報告</p>
+                    <p class="text-sm mt-1">異変があればすぐに伝える</p>
+                </div>
+                <div class="icon-box bg-green-50 border-green-200 text-green-800">
+                    <span class="icon text-6xl"> hygiene-icon-or-mask-emoji </span>
+                    <p class="text-lg font-semibold">感染予防対策</p>
+                    <p class="text-sm mt-1">手洗い、うがい、人混み回避</p>
+                </div>
+                <div class="icon-box bg-purple-50 border-purple-200 text-purple-800">
+                    <span class="icon text-6xl">🧪</span>
+                    <p class="text-lg font-semibold">定期的な検査</p>
+                    <p class="text-sm mt-1">血液検査などで状態をチェック</p>
+                </div>
+            </div>
+            <p class="text-xl text-gray-800 mt-8 text-center font-bold">最も重要なのは、体調の変化を<br><span class="text-red-500">早期に医療スタッフに報告</span>することです。</p>
+            <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
+                <p>リツキサンの副作用を管理し、安全に治療を進めるためには、いくつかの注意点があります。まず、最も重要なことは、点滴中や帰宅後に体調に異変を感じたら、すぐに医師や看護師に伝えることです。これにより、適切な処置を迅速に行うことができます。免疫力が低下するため、手洗いやうがいを徹底し、人混みを避けるなど、日頃から「感染予防対策」を心がけることが大切です。また、治療中は定期的に「血液検査」が行われ、白血球やその他の血液細胞の状態、肝機能、腎機能などがチェックされ、副作用の早期発見と対策が講じられます。</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="flex justify-center items-center mt-6 space-x-3">
+        <button id="prevBtn" class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-600 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            前へ
+        </button>
+        <div id="paginationDots" class="flex space-x-2">
+            <!-- Dots will be inserted here by JavaScript -->
+        </div>
+        <button id="nextBtn" class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-600 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            次へ
+        </button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const paginationDots = document.getElementById('paginationDots');
+        let currentSlideIndex = 0;
+
+        // Function to create and update pagination dots
+        function createPaginationDots() {
+            paginationDots.innerHTML = ''; // Clear existing dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('pagination-dot');
+                if (index === currentSlideIndex) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+                paginationDots.appendChild(dot);
+            });
+        }
+
+        // Function to show a specific slide
+        function showSlide(index) {
+            // Ensure index is within bounds
+            if (index < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentSlideIndex = 0;
+            } else {
+                currentSlideIndex = index;
+            }
+
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show the current slide
+            slides[currentSlideIndex].classList.add('active');
+
+            // Update button states
+            prevBtn.disabled = currentSlideIndex === 0;
+            nextBtn.disabled = currentSlideIndex === slides.length - 1;
+
+            // Update pagination dots
+            createPaginationDots();
+        }
+
+        // Event listeners for navigation buttons
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlideIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlideIndex + 1);
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(0); // Show the first slide initially
+        });
+
+        // Animation for B-cell shattering (Slide 5)
+        // This is a simplified animation using CSS keyframes and visibility
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes pulse-slow {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+            }
+            @keyframes bounce-horizontal {
+                0%, 100% { transform: translateX(0); }
+                50% { transform: translateX(10px); }
+            }
+            .animate-pulse-slow {
+                animation: pulse-slow 3s infinite ease-in-out;
+            }
+            .animate-bounce-horizontal {
+                animation: bounce-horizontal 1s infinite alternate ease-in-out;
+            }
+            @keyframes fade-out-scale {
+                0% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.8; transform: scale(0.95); }
+                100% { opacity: 0.5; transform: scale(0.9); }
+            }
+            @keyframes fade-in-shatter {
+                0% { opacity: 0; transform: scale(0.5); }
+                70% { opacity: 0.8; transform: scale(1.1); }
+                100% { opacity: 1; transform: scale(1); }
+            }
+            .animate-fade-out-scale {
+                animation: fade-out-scale 2s forwards;
+            }
+            .animate-fade-in-shatter {
+                animation: fade-in-shatter 1.5s forwards;
+                animation-delay: 1.5s; /* Start after fade-out-scale begins */
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
