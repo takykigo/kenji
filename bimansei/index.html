@@ -15,11 +15,11 @@
             min-height: calc(100vh - 80px); /* Adjust for header/footer if needed */
         }
         .slide {
-            display: none;
+            display: none !important; /* !important を追加して優先度を上げる */
             animation: fadeIn 0.5s ease-in-out;
         }
         .slide.active {
-            display: flex;
+            display: flex !important; /* !important を追加して優先度を上げる */
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -155,7 +155,6 @@
         <div id="slide-4" class="slide flex flex-col items-center justify-center space-y-6">
             <h2 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-6 text-center">リツキサンの作用機序 - その2:<br>免疫応答の活性化</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-2xl p-4">
-                <!-- ADCC -->
                 <div class="flex flex-col items-center bg-green-50 p-6 rounded-2xl shadow-md border-2 border-green-200">
                     <h3 class="text-xl font-bold text-green-700 mb-4">ADCC (抗体依存性細胞傷害)</h3>
                     <div class="relative w-40 h-40 bg-purple-200 rounded-full flex items-center justify-center border-4 border-purple-400 animate-pulse-slow">
@@ -206,7 +205,7 @@
             </div>
             <p class="text-xl text-gray-800 mt-4 text-center">リツキサンはDLBCL細胞に<br><span class="font-bold text-red-600">アポトーシス（プログラムされた細胞死）</span>を直接誘導します。</p>
             <div class="absolute bottom-4 left-4 right-4 bg-gray-100 p-4 rounded-xl shadow-inner text-gray-700 text-sm md:text-base">
-                <p>リツキサンの作用は、免疫システムの活性化だけにとどまりません。リツキサンがCD20に結合することで、DLBCL細胞に直接的に「アポトーシス」と呼ばれるプログラムされた細胞死を誘導する能力も持っています。これは、細胞自身が内部から死滅するメカニズムであり、異常な細胞が増殖するのを防ぐ上で非常に重要な役割を果たします。これにより、多角的なアプローチでDLBCL細胞の排除を促進します。</p>
+                <p>リツキサンがDLBCL細胞のCD20に結合することで、DLBCL細胞に直接的に「アポトーシス」と呼ばれるプログラムされた細胞死を誘導する能力も持っています。これは、細胞自身が内部から死滅するメカニズムであり、異常な細胞が増殖するのを防ぐ上で非常に重要な役割を果たします。これにより、多角的なアプローチでDLBCL細胞の排除を促進します。</p>
             </div>
         </div>
 
