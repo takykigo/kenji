@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>93歳・せん妄とCRP徹底図解インフォグラフィック</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      word-break: break-word;
+    }
+    /* スマホでの読みやすさを担保する基本サイズ設定 */
+    .text-body-lg {
+      font-size: 1.0625rem; /* 17px */
+      line-height: 1.75;
+    }
+    .text-body-xl {
+      font-size: 1.125rem; /* 18px */
+      line-height: 1.75;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-16">
+
+  <!-- ================= TOP HEADER BAR ================= -->
+  <header class="bg-teal-700 text-white shadow-md sticky top-0 z-30">
+    <div class="max-w-xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <div class="flex items-center space-x-2.5">
+        <span class="p-2 bg-teal-800 rounded-xl shadow-inner">
+          <svg class="w-6 h-6 text-teal-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </span>
+        <div>
+          <span class="text-xs bg-teal-600 font-bold px-2 py-0.5 rounded text-teal-100 uppercase tracking-wider">医療図解シート</span>
+          <h1 class="text-lg font-black leading-tight">93歳・せん妄とCRP高値</h1>
+        </div>
+      </div>
+      <button onclick="window.print()" class="no-print text-xs bg-teal-800/80 hover:bg-teal-900 border border-teal-500/50 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 active:scale-95 transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+        印刷 / 保存
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT (MOBILE CENTERED) ================= -->
+  <main class="max-w-xl mx-auto px-4 pt-5 space-y-6">
+
+    <!-- 1. PATIENT PROFILE CARD (INFOGRAPHIC) -->
+    <section class="bg-white rounded-3xl p-5 shadow-sm border-2 border-slate-200 relative overflow-hidden">
+      <!-- Background Graphic Pill -->
+      <div class="absolute -right-8 -top-8 w-32 h-32 bg-teal-50 rounded-full pointer-events-none -z-0"></div>
+
+      <div class="relative z-10">
+        <div class="flex items-center justify-between mb-3">
+          <span class="bg-slate-100 text-slate-700 font-bold text-xs px-3 py-1 rounded-full border border-slate-300">
+            10月30日 脳神経内科受診
+          </span>
+          <span class="bg-emerald-100 text-emerald-800 font-black text-xs px-3 py-1 rounded-full border border-emerald-300 flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            現在：回復傾向
+          </span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-3 tracking-tight">
+          患者様カルテ要約
+        </h2>
+
+        <!-- Visual Stats Grid -->
+        <div class="grid grid-cols-2 gap-2.5 my-3">
+          <!-- Age & Gender -->
+          <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 flex items-center space-x-3">
+            <div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-black text-xl flex-shrink-0">
+              👴
+            </div>
+            <div>
+              <div class="text-xs text-slate-500 font-bold">年齢・性別</div>
+              <div class="text-xl font-black text-slate-800">93<span class="text-sm font-bold">歳 男性</span></div>
+            </div>
+          </div>
+          <!-- Weight -->
+          <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 flex items-center space-x-3">
+            <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-black text-lg flex-shrink-0">
+              ⚖️
+            </div>
+            <div>
+              <div class="text-xs text-slate-500 font-bold">体重（やせ型）</div>
+              <div class="text-xl font-black text-slate-800">48<span class="text-sm font-bold"> kg</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prior History Banner -->
+        <div class="bg-amber-50 rounded-2xl p-3.5 border border-amber-200 flex items-start gap-2.5">
+          <span class="text-xl">⚠️</span>
+          <p class="text-sm font-bold text-amber-900 leading-snug">
+            <strong>既往歴：</strong>約2年前にも同様の異常行動エピソードあり。<br>
+            <span class="text-xs text-amber-800 font-medium">※93歳・48kgは「身体・脳の予備力」が小さく、軽度の炎症でも急激に意識が混乱しやすい状態にあります。</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TIMELINE INFOGRAPHIC (10/21 -> 10/29 -> 10/30) -->
+    <section class="bg-white rounded-3xl p-5 shadow-sm border-2 border-slate-200">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100">
+        <span class="w-8 h-8 rounded-xl bg-indigo-600 text-white font-black flex items-center justify-center text-sm">1</span>
+        <h3 class="text-xl font-black text-slate-900">経過タイムライン</h3>
+      </div>
+
+      <div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2.5 before:top-3 before:bottom-3 before:w-1 before:bg-slate-200">
+
+        <!-- Step 1: 10/21 -->
+        <div class="relative group">
+          <div class="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-rose-500 border-4 border-white shadow flex items-center justify-center"></div>
+          <div class="bg-rose-50/80 rounded-2xl p-4 border border-rose-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-black px-2.5 py-0.5 rounded-full bg-rose-600 text-white">10/21 発症</span>
+              <span class="text-xs text-rose-700 font-bold">【急性期】</span>
+            </div>
+            <h4 class="text-lg font-black text-rose-950 mb-1">不自然な異常行動が激化</h4>
+            <p class="text-body-lg text-slate-700 font-medium">
+              昼夜構わずつじつまの合わない言動や不自然な行動が急激に出現。2年前と同じような異常状態に陥る。
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2: 10/29 -->
+        <div class="relative group">
+          <div class="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-amber-500 border-4 border-white shadow flex items-center justify-center"></div>
+          <div class="bg-amber-50/80 rounded-2xl p-4 border border-amber-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-black px-2.5 py-0.5 rounded-full bg-amber-600 text-white">10/29 鎮静化</span>
+              <span class="text-xs text-emerald-700 font-bold">【ピーク通過】</span>
+            </div>
+            <h4 class="text-lg font-black text-amber-950 mb-1">徐々に症状が落ち着き始める</h4>
+            <p class="text-body-lg text-slate-700 font-medium">
+              異常行動が減少。ご家族の見立て通り、脳波の異常波形も出にくい「自然回復の過程」へ入る。
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3: 10/30 -->
+        <div class="relative group">
+          <div class="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-teal-600 border-4 border-white shadow flex items-center justify-center"></div>
+          <div class="bg-teal-50 rounded-2xl p-4 border-2 border-teal-300">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-black px-2.5 py-0.5 rounded-full bg-teal-700 text-white">10/30 本日受診</span>
+              <span class="text-xs text-teal-800 font-bold">【脳神経内科】</span>
+            </div>
+            <h4 class="text-lg font-black text-teal-950 mb-1">主治医による診察と各種検査</h4>
+            <p class="text-body-lg text-slate-700 font-medium">
+              問診テスト・血液検査・頭部CTを実施。「認知症進行ではなくCRPに伴う一過性せん妄」と確定診断。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. CLINICAL DIAGNOSIS FLOW (WHY BLOOD & CT?) -->
+    <section class="bg-white rounded-3xl p-5 shadow-sm border-2 border-slate-200 space-y-4">
+      <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+        <span class="w-8 h-8 rounded-xl bg-teal-600 text-white font-black flex items-center justify-center text-sm">2</span>
+        <h3 class="text-xl font-black text-slate-900">診察室での検査と診断プロセス</h3>
+      </div>
+
+      <!-- Step A: Dementia Quiz -->
+      <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-200 space-y-2">
+        <div class="flex items-center gap-2">
+          <span class="bg-indigo-600 text-white text-xs font-black px-2 py-0.5 rounded">検査 1</span>
+          <h4 class="text-base font-black text-indigo-950">認知機能問診テストの判断</h4>
+        </div>
+        <p class="text-xs text-indigo-900 bg-white/70 p-2.5 rounded-xl border border-indigo-100 font-medium">
+          <strong>【質問内容】：</strong>今日は何日？ / 子供は何人？名前は？ / 孫は何人？ / 世界で戦争が起こっているがどことどこ？ など
+        </p>
+        <div class="p-3 bg-white rounded-xl border border-indigo-200 text-body-lg text-slate-800 leading-snug">
+          <span class="inline-block bg-amber-400 text-amber-950 font-black text-xs px-2 py-0.5 rounded mb-1">先生の判断ポイント</span><br>
+          一部答えられない設問もあったものの、<strong>「全くダメでもなく、認知症が急激に進行しているとは言えない」</strong>状態。だからこそ、頭の中や体内に別の原因がないかを特定するため、<strong>血液検査とCT撮影</strong>へ進むことになりました。
+        </div>
+      </div>
+
+      <!-- Down Arrow Indicator -->
+      <div class="flex justify-center text-slate-400">
+        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+      </div>
+
+      <!-- Step B: CT & Blood Test Results Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <!-- CT Result -->
+        <div class="bg-emerald-50/80 p-4 rounded-2xl border-2 border-emerald-300">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-black text-emerald-800 bg-emerald-200 px-2 py-0.5 rounded">頭部CT検査</span>
+            <span class="text-base">🧠</span>
+          </div>
+          <div class="text-2xl font-black text-emerald-900 my-1">年相応・異常なし</div>
+          <p class="text-sm text-emerald-800 font-medium leading-relaxed">
+            急な脳梗塞や脳出血、慢性硬膜下血腫などの<strong>頭の中の緊急病変は否定</strong>されました。
+          </p>
+        </div>
+
+        <!-- CRP Blood Result -->
+        <div class="bg-amber-50/80 p-4 rounded-2xl border-2 border-amber-300">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-black text-amber-900 bg-amber-200 px-2 py-0.5 rounded">血液検査</span>
+            <span class="text-base">🩸</span>
+          </div>
+          <div class="text-2xl font-black text-amber-900 my-1">CRP 2.0 超</div>
+          <p class="text-sm text-amber-800 font-medium leading-relaxed">
+            体内で炎症反応あり。若い人なら軽症でも、<strong>93歳の脳には許容量オーバー</strong>となりせん妄を誘発。
+          </p>
+        </div>
+      </div>
+
+      <!-- Final Diagnosis Banner -->
+      <div class="bg-gradient-to-r from-teal-700 to-slate-800 text-white p-4 rounded-2xl shadow-sm">
+        <div class="text-xs font-bold text-teal-200 mb-1 flex items-center gap-1">
+          <svg class="w-4 h-4 text-amber-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+          主治医の診断総括
+        </div>
+        <p class="text-body-xl font-bold leading-snug">
+          「1週間前と比べ異常行動も減っており、確実に回復方向にある。CRPは2超だが、今すぐ入院治療が必要な急性状態ではない。ご自宅で無理なく経過を見守りましょう」
+        </p>
+      </div>
+
+    </section>
+
+    <!-- 4. CRP COLOR GAUGE (INFOGRAPHIC ACCURATE PIN) -->
+    <section class="bg-white rounded-3xl p-5 shadow-sm border-2 border-slate-200 space-y-4">
+      <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+        <span class="w-8 h-8 rounded-xl bg-amber-500 text-white font-black flex items-center justify-center text-sm">3</span>
+        <h3 class="text-xl font-black text-slate-900">CRPメーターと今回の位置づけ</h3>
+      </div>
+
+      <p class="text-body-lg text-slate-700 font-medium">
+        CRP（C反応性蛋白）は体内で炎症が起きると急増する「火災警報器」です。
+      </p>
+
+      <!-- CRP VISUAL GAUGE CONTAINER -->
+      <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 pt-10 pb-4 relative">
+
+        <!-- PIN MARKER: POSITIONED PRECISELY AT 1.0 - 4.9 RANGE (~48%) -->
+        <div class="absolute top-1 left-[48%] -translate-x-1/2 flex flex-col items-center z-20">
+          <div class="bg-rose-600 text-white font-black text-xs sm:text-sm px-3 py-1 rounded-full shadow-lg border-2 border-white whitespace-nowrap animate-bounce">
+            今回の数値：2.0+ mg/dL
+          </div>
+          <div class="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-rose-600"></div>
+        </div>
+
+        <!-- GAUGE BAR -->
+        <div class="h-7 w-full rounded-full flex overflow-hidden shadow-inner border border-slate-300">
+          <!-- 0.0 - 0.14 (15%) -->
+          <div class="w-[15%] bg-emerald-500 flex items-center justify-center text-[10px] font-black text-white">正常</div>
+          <!-- 0.15 - 0.99 (20%) -->
+          <div class="w-[20%] bg-amber-300 flex items-center justify-center text-[10px] font-black text-amber-950">軽度</div>
+          <!-- 1.0 - 4.9 (30%) ★ PIN IS HERE -->
+          <div class="w-[30%] bg-amber-500 relative flex items-center justify-center text-xs font-black text-white ring-2 ring-rose-600 z-10">
+            中等度 ★ココ
+          </div>
+          <!-- 5.0 - 9.9 (20%) -->
+          <div class="w-[20%] bg-orange-600 flex items-center justify-center text-[10px] font-black text-white">中〜高</div>
+          <!-- 10.0+ (15%) -->
+          <div class="w-[15%] bg-rose-600 flex items-center justify-center text-[10px] font-black text-white">重症</div>
+        </div>
+
+        <!-- Numerical Scale Marks below -->
+        <div class="flex justify-between text-xs font-bold text-slate-500 mt-2 px-1">
+          <span>0.0</span>
+          <span>0.15</span>
+          <span class="text-amber-800 font-black">1.0〜4.9</span>
+          <span>5.0</span>
+          <span class="text-rose-600">10.0+</span>
+        </div>
+      </div>
+
+      <!-- Why 2+ matters in 93yo -->
+      <div class="bg-amber-50/80 rounded-2xl p-4 border border-amber-200 space-y-2">
+        <h4 class="text-base font-black text-amber-950 flex items-center gap-1.5">
+          <span>🔍</span> 93歳・体重48kgにおける「CRP 2超」の意味
+        </h4>
+        <p class="text-body-lg text-slate-700 font-medium">
+          若い人であればCRP 2は「軽い風邪」程度ですが、<strong>高齢者は免疫の反応が弱いため、肺炎などの感染があっても数値が10まで跳ね上がらない</strong>傾向があります。
+        </p>
+        <p class="text-body-lg text-slate-700 font-medium">
+          数値の絶対値は「2超」でも、93歳の身体にとっては<strong>脳の許容量をオーバーさせてせん妄を起こすのに十分な火元</strong>だったと考えられます。
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. MECHANISM: CRP -> DELIRIUM (3 STEPS INFOGRAPHIC) -->
+    <section class="bg-white rounded-3xl p-5 shadow-sm border-2 border-slate-200 space-y-4">
+      <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+        <span class="w-8 h-8 rounded-xl bg-purple-600 text-white font-black flex items-center justify-center text-sm">4</span>
+        <h3 class="text-xl font-black text-slate-900">なぜ炎症で「せん妄」が起きるのか？</h3>
+      </div>
+
+      <p class="text-body-lg text-slate-700 font-medium">
+        首から下の炎症が、なぜ「頭の混乱や不自然な言動」につながるのかを図解します。
+      </p>
+
+      <!-- 3-STEP VERTICAL FLOW INFOGRAPHIC -->
+      <div class="space-y-3">
+        <!-- Step 1 -->
+        <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
+            🔥
+          </div>
+          <div>
+            <div class="text-xs font-black text-rose-600 uppercase tracking-wide">STEP 1</div>
+            <h4 class="text-base font-black text-slate-900">体内のどこかで炎症が発生</h4>
+            <p class="text-sm text-slate-600 font-medium mt-1 leading-snug">
+              気管支・尿路・脱水などで微小な炎症。血液中に<strong>炎症性サイトカイン</strong>が放出され、肝臓で<strong>CRP</strong>が作られる。
+            </p>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="flex justify-center text-slate-400 -my-1">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
+            🛡️
+          </div>
+          <div>
+            <div class="text-xs font-black text-amber-700 uppercase tracking-wide">STEP 2</div>
+            <h4 class="text-base font-black text-slate-900">高齢による「脳のバリア」の緩み</h4>
+            <p class="text-sm text-slate-600 font-medium mt-1 leading-snug">
+              通常はバリア（血液脳関門）が毒素をブロックしますが、<strong>93歳という加齢により隙間が生じ、炎症の刺激が脳内へ直接伝播</strong>。
+            </p>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="flex justify-center text-slate-400 -my-1">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex items-start gap-3 p-4 rounded-2xl bg-purple-50 border-2 border-purple-300">
+          <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
+            ⚡
+          </div>
+          <div>
+            <div class="text-xs font-black text-purple-700 uppercase tracking-wide">STEP 3</div>
+            <h4 class="text-base font-black text-purple-950">脳内ホルモンの乱れ ＝ せん妄</h4>
+            <p class="text-sm text-purple-900 font-medium mt-1 leading-snug">
+              意識を保つ物質（アセチルコリン）が激減し、興奮物質（ドーパミン）が過剰に。<strong>脳が許容量オーバーを起こし一時的なパニック</strong>（不自然な行動）が発生。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DELIRIUM VS DEMENTIA (COMPARISON CARDS) -->
+    <section class="bg-white rounded-3xl p-5 shadow-sm border-2 border-slate-200 space-y-4">
+      <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+        <span class="w-8 h-8 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center text-sm">5</span>
+        <h3 class="text-xl font-black text-slate-900">せん妄 と 認知症 の決定的な違い</h3>
+      </div>
+
+      <div class="grid grid-cols-1 gap-3">
+        <!-- Feature 1: Speed -->
+        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="text-xs text-slate-500 font-bold mb-1">発症のスピード</div>
+          <div class="flex items-center justify-between gap-2">
+            <div class="w-1/2 p-2 rounded-xl bg-teal-100 border border-teal-300 text-center">
+              <span class="text-xs font-bold text-teal-800 block">せん妄（今回）</span>
+              <strong class="text-sm font-black text-teal-950">数時間〜数日で急激</strong>
+            </div>
+            <div class="w-1/2 p-2 rounded-xl bg-slate-200 text-center">
+              <span class="text-xs font-bold text-slate-600 block">通常の認知症</span>
+              <span class="text-sm font-bold text-slate-700">年単位でゆっくり</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Fluctuations -->
+        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="text-xs text-slate-500 font-bold mb-1">状態の波（日内変動）</div>
+          <div class="flex items-center justify-between gap-2">
+            <div class="w-1/2 p-2 rounded-xl bg-teal-100 border border-teal-300 text-center">
+              <span class="text-xs font-bold text-teal-800 block">せん妄（今回）</span>
+              <strong class="text-sm font-black text-teal-950">波があり夕方悪化</strong>
+            </div>
+            <div class="w-1/2 p-2 rounded-xl bg-slate-200 text-center">
+              <span class="text-xs font-bold text-slate-600 block">通常の認知症</span>
+              <span class="text-sm font-bold text-slate-700">一日中ほぼ一定</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Reversibility -->
+        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="text-xs text-slate-500 font-bold mb-1">回復の可能性（可逆性）</div>
+          <div class="flex items-center justify-between gap-2">
+            <div class="w-1/2 p-2 rounded-xl bg-emerald-100 border-2 border-emerald-400 text-center">
+              <span class="text-xs font-bold text-emerald-800 block">せん妄（今回）</span>
+              <strong class="text-sm font-black text-emerald-950">炎症が引けば治る</strong>
+            </div>
+            <div class="w-1/2 p-2 rounded-xl bg-slate-200 text-center">
+              <span class="text-xs font-bold text-slate-600 block">通常の認知症</span>
+              <span class="text-sm font-bold text-slate-700">自然には戻らない</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. HOME CARE & OBSERVATION GUIDE -->
+    <section class="bg-white rounded-3xl p-5 shadow-sm border-2 border-slate-200 space-y-4">
+      <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+        <span class="w-8 h-8 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center text-sm">6</span>
+        <h3 class="text-xl font-black text-slate-900">家庭での見守りと注意点</h3>
+      </div>
+
+      <!-- Action Cards -->
+      <div class="space-y-3">
+        <!-- Reassurance -->
+        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200">
+          <h4 class="text-base font-black text-emerald-950 flex items-center gap-2 mb-1">
+            <span>🌙</span> 夕方・夜間の波に慌てない
+          </h4>
+          <p class="text-body-lg text-slate-700 font-medium">
+            せん妄は夕方から夜にかけて一時的にぶり返しやすい（夜間せん妄）特徴があります。否定したり叱ったりせず、「ここは自宅だよ、大丈夫だよ」と優しく安心させてあげてください。部屋は薄暗くせず明かりを灯しておきます。
+          </p>
+        </div>
+
+        <!-- Hydration & Breathing -->
+        <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200">
+          <h4 class="text-base font-black text-sky-950 flex items-center gap-2 mb-1">
+            <span>💧</span> 水分とむせ（誤嚥）のチェック
+          </h4>
+          <p class="text-body-lg text-slate-700 font-medium">
+            48kgの低体重では脱水が進みやすいため、スプーンや一口ずつの水分補給を心がけます。食事中に激しくむせたり、喉がゴロゴロ鳴っていないか観察してください。
+          </p>
+        </div>
+
+        <!-- Red Flags -->
+        <div class="p-4 rounded-2xl bg-rose-50 border-2 border-rose-300">
+          <h4 class="text-base font-black text-rose-950 flex items-center gap-2 mb-1">
+            <span>🚨</span> すぐに再受診すべきサイン
+          </h4>
+          <ul class="text-sm text-rose-900 font-bold space-y-1.5 list-disc list-inside">
+            <li>呼びかけても目を開けない、まったく起きない（強い傾眠）</li>
+            <li>肩でハアハアと荒い息をしている、呼吸が異常に速い</li>
+            <li>片側の手足に力が入らない、顔が左右非対称になる</li>
+            <li>水分が全く飲み込めず、口からこぼれる</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SUMMARY NOTE -->
+    <div class="bg-teal-900 text-teal-100 rounded-3xl p-5 text-center shadow-lg space-y-2">
+      <div class="text-2xl">🌱</div>
+      <h4 class="text-lg font-black text-white">ご家族への安心メッセージ</h4>
+      <p class="text-sm font-medium leading-relaxed">
+        2年前にも同じような状況から無事に回復された実績があります。<br>
+        今回もCTで頭の急変はなく、すでに10/29から自然と落ち着き始めています。焦らず、静かで安心できる環境で体力の回復を見守ってあげてください。
+      </p>
+    </div>
+
+  </main>
+
+  <!-- BOTTOM FOOTER -->
+  <footer class="mt-8 text-center text-xs text-slate-500 max-w-xl mx-auto px-4 no-print">
+    本図解は10/30脳神経内科での問診・CT検査・血液検査（CRP）の所見を元にまとめたご家族向け整理シートです。
+  </footer>
+
+</body>
+</html>
